@@ -13,7 +13,6 @@ const Header = ( ) => {
                     <div className="space-x-6 mt-16">
                         <a href="#Projects" className="rounded border border-white py-3 px-8 "> Projects</a>
                         <a href="#Contact" className="rounded border bg-blue-500 py-3 px-8"> Contact Us</a>
-
                     </div>
                 </div>
             </div>
