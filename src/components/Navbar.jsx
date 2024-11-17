@@ -37,17 +37,16 @@ const Navbar = () => {
        
             <div className={`md:hidden ${showMobileMenu ? 'fixed w-full' : 'h-0 w-0' } right-0 top-0 bottom-0 overflow-hidden  bg-white transation-all duration-200` }>
 
-            <div className="flex justify-end p-6 cursor-pointer" onClick={()=>setShowMobileMenu(false)}>
-             <img src={cross_icon} className="w-6 " />
-            </div>
-            <ul className="flex flex-col mt-5 items-center gap-2 px-6 text-lg font-meduim">
-                <a href="#Home" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Home</a>
-                <a href="#About" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>About</a>
-                <a href="#Projects" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Projects</a>
-                <a href="#Testimonials" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Testimonials</a>
-            </ul>
-           
-        </div>
+                <div className="flex justify-end p-6 cursor-pointer" onClick={()=>setShowMobileMenu(false)}>
+                    <img src={cross_icon} className="w-6 " />
+                </div>
+                <ul className="flex flex-col mt-5 items-center gap-2 px-6 text-lg font-meduim">
+                    <a href="#Home" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Home</a>
+                    <a href="#About" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>About</a>
+                    <a href="#Projects" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Projects</a>
+                    <a href="#Testimonials" className="inline-block px-4 py-2 rounded-full" onClick={()=>setShowMobileMenu(false)}>Testimonials</a>
+                </ul>
+           </div>
         
        
     </div>
