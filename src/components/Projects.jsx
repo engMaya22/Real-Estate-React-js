@@ -4,7 +4,7 @@ import {assets , projectsData} from "../assets/assets"
 const Projects =()=>{
     const {left_arrow  , right_arrow } = assets;
     const [currentIndex , setCurrentIndex] = useState(0);
-    const [cardsToShow , setCardsToShow] = useState(1);//cards to show at least one card
+    const [cardsToShow , setCardsToShow] = useState(1);//cards to show at least one card by default
 
     useEffect(()=>{
 
@@ -64,7 +64,7 @@ const Projects =()=>{
                                         <div className="flex justify-center absolute left-0 right-0 bottom-5 "> 
                                             <div className="bg-white  inline-block w-3/4 px-4 py-2 shadow-md">
                                                 <h2 className="text-gray-800 text-xl font-smibold">{project.title}</h2>
-                                                <p className="text-gray-500 text-sm"> { project.price} <span className=" ">|</span> { project.location}</p>
+                                                <p className="text-gray-500 text-sm"> { project.price} <span className=" px-1">|</span> { project.location}</p>
                                             </div>
                                         </div>
 
