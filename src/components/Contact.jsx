@@ -1,9 +1,15 @@
 import useContact from  "../hooks/useContact"
+import { motion } from "framer-motion"
 
 const Contact = () => { 
     const {onSubmit , result} = useContact();
       
-    return <div className="p-6 py-20 text-center lg:px-32 w-full overflow-hidden" id="Contact">
+    return <motion.div 
+            initial={{opacity:0 , x:-200}}
+            transition={{duration:1}}
+            whileInView={{opacity:1 , x:0}}
+            viewport={{once:true}}
+             className="p-6 py-20 text-center lg:px-32 w-full overflow-hidden" id="Contact">
                 <h1 className="text-2xl sm:text-4xl text-center font-bold mb-2"> Contact
                 <span className="underline underline-offsite-4 decoration-1 under font-light"> With Us </span></h1>
                 <p  className="text-gray-500 max-w-80 mx-auto text-center mb-12 ">Ready to Make a Move ?
@@ -29,7 +35,7 @@ const Contact = () => {
                     <button  className="px-12 py-2 bg-blue-600 text-white rounded mb-10">{result ? result : 'Send Message'}</button>
                 </form>
                
-           </div>
+           </motion.div>
         //    
 
 

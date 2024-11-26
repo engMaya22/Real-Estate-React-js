@@ -29,5 +29,6 @@ function App() {
 //make data form saved by local storage
 //make tailwind class for buttons
 //make copy right dynamic
+//use hook projects
 
 export default App

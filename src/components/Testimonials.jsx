@@ -1,12 +1,20 @@
 
 
 import {testimonialsData , assets} from "../assets/assets"
+import { motion } from "framer-motion"
+
 const Testimonials = ()=>{
     const {star_icon} = assets;
 
     return (
          
-         <div className="container mx-auto py-10  lg:px-32 w-full overflow-hidden" id="Testimonials">
+         <motion.div 
+         
+            initial={{opacity:0 , x:200}}
+            transition={{duration:1}}
+            whileInView={{opacity:1 , x:0}}
+            viewport={{once:true}}
+            className="container mx-auto py-10  lg:px-32 w-full overflow-hidden" id="Testimonials">
             <h1 className="text-2xl sm:text-4xl text-center font-bold mb-2"> Customer
                 <span className="underline underline-offsite-4 decoration-1 under font-light"> Testimonials </span></h1>
             <p  className="text-gray-500 max-w-80 mx-auto text-center mb-12 ">Real Stories from Those Who Found Home With Us</p>
@@ -33,7 +41,7 @@ const Testimonials = ()=>{
             }
 
          </div>
-         </div>
+         </motion.div>
         
     )
 
