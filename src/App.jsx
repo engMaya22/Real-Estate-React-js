@@ -24,11 +24,9 @@ function App() {
     </>
   )
 }
-// make tailwind css for h1 where it is common for all sections and its span
-//make card for project and testimonial
-//make data form saved by local storage
-//make tailwind class for buttons
-//make copy right dynamic
-//use hook projects
+
+
+
+// deploy 
 
 export default App

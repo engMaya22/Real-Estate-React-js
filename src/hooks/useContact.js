@@ -1,10 +1,27 @@
 
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {localStorageUtil} from  "../utils/localStorageUtil"
 
 const useContact = ()=>{
     const [result, setResult] = useState("");
+    const [name, setName] = useState(() => localStorageUtil.get("name"));
+    const [email, setEmail] = useState(() => localStorageUtil.get("email"));
+    const [message, setMessage] = useState(() => localStorageUtil.get("message"));
+
+    useEffect(() => {
+    localStorageUtil.set("name", name);
+    }, [name]);
+
+    useEffect(() => {
+    localStorageUtil.set("email", email);
+    }, [email]);
+
+    useEffect(() => {
+    localStorageUtil.set("message", message);
+    }, [message]);
+   
 
     const onSubmit = async (event) => {
         event.preventDefault();
@@ -23,6 +40,12 @@ const useContact = ()=>{
         if (data.success) {
         setResult("");
         toast.success("Form Submitted Successfully")
+        setName("");
+        setEmail("");
+        setMessage("");
+        localStorage.removeItem("contact_name");
+        localStorage.removeItem("contact_email");
+        localStorage.removeItem("contact_message");
         } else {
         console.log("Error", data);
         setResult("");
@@ -31,7 +54,14 @@ const useContact = ()=>{
     };
     return {
         onSubmit ,
-        result
+        result ,
+        name,
+        email,
+        message,
+        setName,
+        setEmail,
+        setMessage
+
 
     }
 

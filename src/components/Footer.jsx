@@ -2,6 +2,9 @@ import {assets} from "../assets/assets"
 
 const Footer =()=>{
     const {logo_dark} = assets;
+    var today = new Date(),
+    date = today.getFullYear() 
+    
     return <div className="pt-10 px-4 md:px-20 lg:px-32 w-full bg-gray-900 overflow-hidden " id="Footer">
              <div className="flex mx-auto container flex-col md:flex-row justify-between items-start">
                 <div className="mb-8 md:mb-0 w-full md:w-1/3">
@@ -39,7 +42,7 @@ const Footer =()=>{
              </div>
         
              <div className="border-t border-gray-700 mt-10 py-4 text-center text-gray-500">
-               Copyright 2024 . All Rights Reserved .
+               Copyright {date} . All Rights Reserved .
              </div>
          
            </div>

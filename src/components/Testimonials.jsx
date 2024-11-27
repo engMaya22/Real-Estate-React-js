@@ -15,9 +15,9 @@ const Testimonials = ()=>{
             whileInView={{opacity:1 , x:0}}
             viewport={{once:true}}
             className="container mx-auto py-10  lg:px-32 w-full overflow-hidden" id="Testimonials">
-            <h1 className="text-2xl sm:text-4xl text-center font-bold mb-2"> Customer
-                <span className="underline underline-offsite-4 decoration-1 under font-light"> Testimonials </span></h1>
-            <p  className="text-gray-500 max-w-80 mx-auto text-center mb-12 ">Real Stories from Those Who Found Home With Us</p>
+            <h1 className="heading"> Customer
+                <span className="headingSpan underline-offsite-4"> Testimonials </span></h1>
+            <p  className="pargraph ">Real Stories from Those Who Found Home With Us</p>
             <div className="flex flex-wrap gap-2 sm:gap-0 justify-center ">
             {
                 testimonialsData.map((testimonial , index)=> ( 

@@ -10,11 +10,11 @@ const About =()=>{
                 viewport={{once:true}}
                 className ="  container flex flex-col items-center jsutify-center
                     mx-auto p-14 md:px-20 lg:px-32 w-full overflow-hidden" id="About">
-                <h1 className="text-2xl sm:text-4xl font-bold mb-2">About 
-                    <span className="underline underline-offsite-4 decoration-1 under font-light">Our Brand</span>
+                <h1 className="heading">About 
+                    <span className="headingSpan underline-offsite-4">Our Brand</span>
                 </h1>
                 {/* max-w-80 to make the paragh in width */}
-                <p className="text-gray-500 max-w-80 text-center mb-8">Passionate About Our Properties , Dedicated to Your Vision </p>
+                <p className="paragraph">Passionate About Our Properties , Dedicated to Your Vision </p>
                 <div className="flex flex-col md:flex-row md:gap-20 items-center md:items-start">
                     <img src={brand_img} className="w-full sm:w-1/2 max-w-lg "/>
                     <div className="flex flex-col items-center md:items-start mt-10 text-gray-600">
